@@ -60,3 +60,55 @@ putchar(c) // prints a character each time it is called
 #+end_src
 
 - When counting the number of words, or requiring to separate words, using a 'state'  of whether or not the value of 'c' (getchar()) can help track whether the text stream is within a word.
+
+*** Converting character literals
+
+- for integers 0-9, we can convert the input to a number as seen below:
+
+#+begin_src c
+int c;
+c = getchar(); // imagine c is int 0-9
+printf(c-'0'); // will print the int, allows to manipulate index positions (see exercise 1_14 for example)
+#+end_src
+
+- it is also possible to print a letter by passing '%c' as a substitution on th eprintf function
+
+** Functions
+
+*** Function Prototypes
+
+A declaration made before the main function which has a structure that agrees to the function detailed in the file. It is an error if the definition of a function or any uses of it don't agree with its prototype.
+
+- Parameter names need not agree as they needn't be present but the type must agree.
+
+** External Variables
+
+- must be defined only once outside of any function; this sets aside storage for it.
+
+#+begin_src c
+#include <stdio.h>
+
+#define MAXLINE 100
+
+int max;
+char longest[MAXLINE]
+char line[MAXLINE]
+
+int main(void) {
+extern int max; // referring to the external variable
+}
+#+end_src
+
+- 'extern' keyword not required if the definition of variable present before its use in a function
+
+* Chapter 2 - Types, Operators, and Expressions
+
+** Type Ranges
+
+- type ranges can be found in the <limits.h> header file
+
+** Common Standard Library Functions
+
+- strlen() and other string functions are declared in the standard header <string.h>
+- converting uppercase to lowercase we can use tolower() from <ctype.h>
+- to check if something is a digit we can use isdigit() from <ctype.h>

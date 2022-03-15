@@ -7,7 +7,7 @@
 ** using a function to make the conversion
 */
 
-float converttemp(int);
+float converttemp(int fahr);
 
 int main(void) {
 
