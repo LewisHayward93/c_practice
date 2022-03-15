@@ -7,11 +7,11 @@
 
 int main() {
 
-  float nc;
+  long nc;
 
   for (nc = 0; getchar() != EOF; ++nc)
     ; // null statement to satisfy the body of the for loop is empty
-  printf("%.0f\n", nc);
+  printf("%ld\n", nc);
 
   return 0;
 }
